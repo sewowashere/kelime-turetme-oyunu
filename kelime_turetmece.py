@@ -1,8 +1,8 @@
 import random
 
 kelimeler = ["armut", "beton", "cereyan", "çiçek", "dolap", "ezik", "fotoğraf", "gezi",
-            "halı", "ışık", "insan", "jetski", "kola", "lale", "metafor", "nane",
-            "otoyol", "öküz", "peri", "rosto", "sinek", "şelale", "taşıt", "uzuv", "üzengi", "votka", "yatak", "zincir"]
+            "halı", "ışık", "insan", "jetski", "kola", "lale", "metafor", "mod", "nane",
+            "otoyol", "öküz", "peri", "rosto", "sinek", "şelale", "taşıt", "uzuv", "üzengi", "varlık", "yatak", "zincir"]
 
 def start():
     user_input = input("\n\nKELİME TÜRETMECE\nbaşlamak için yaz: başla\n")
@@ -14,18 +14,23 @@ def start():
         return start()
 
 def word_pick(word):
-    return next((kelime for kelime in kelimeler if kelime.startswith(word)), None)
+    deger = [kelime for kelime in kelimeler if kelime.startswith(word)]
+    return str(deger[random.randint(0,len(deger)-1)][0])
 
 def main():
     current_word = start()
     print(f"\nverilen kelime: {current_word}")
     
     while True:
-        gamers_w = input(f"\nsenin kelimen: ")
+        gamers_w = str(input(f"\nsenin kelimen: "))
 
         if not gamers_w:
             print("kelime girilmedi.")
             break
+
+        if current_word[-1] != gamers_w[0]:
+            print("kaybettin.")
+            main()
 
         last_letter = gamers_w.lower()[-1]
 
@@ -37,4 +42,5 @@ def main():
         else:
             print("bu kelimeye karşılık bir kelime bulunamadı.")
 
-main()
+if __name__ == "__main__" :
+    main()
