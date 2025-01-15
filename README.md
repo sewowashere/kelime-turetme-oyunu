@@ -7,4 +7,4 @@ TRIVERSI is a game that recreates Triversi game, but for 3 players. Game has spe
 Try it yourself and enjoy.
 
 
-(Bu ödevden 100 aldım. Dersi MAG'tan alıyordum.)
+(Bu ödevden 100 aldım. Dersi MAG'dan alıyordum.)
