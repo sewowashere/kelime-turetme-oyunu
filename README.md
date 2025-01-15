@@ -5,3 +5,6 @@ TRIVERSI is a game that recreates Triversi game, but for 3 players. Game has spe
 3. Game table can't be bigger than 23x23.
 
 Try it yourself and enjoy.
+
+
+(Bu ödevden 100 aldım. Dersi MAG'tan alıyordum.)
